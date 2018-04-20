@@ -11,8 +11,8 @@ function checkValueFromPOST($valueToCheck, $minValue, $maxValue) {
     $valueText = '';
     $canCalculate = false;
     
-    if (empty($valueToCheck)) {           // Empty?
-        $valueText = "Brak pierwszej wartości";
+    if (null === $valueToCheck) {           // Null?
+        $valueText = "Brak wartości";
     } elseif (is_nan($valueToCheck)) {    // Maybe is not a number?
         $valueText = "Wartość w pierwszym powinna być liczbą!";
     } elseif ($valueToCheck < $minValue || $valueToCheck > $maxValue) {     // In the range?
@@ -40,8 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Both are OK? Lets calculate!
     if ($canCalculateFirst && $canCalculateSecond) {
         $finalResultPLN = ($firstValue * 100) + ($secondValue * 100);
-    } else {
-        
+        $finalResultPLN /= 100;
     }
 }
 

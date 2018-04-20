@@ -2,48 +2,120 @@
     Author     : Paweł Gonciarz
 */
 
+header {
+    margin: auto;
+    width: 800px;
+    height: 60px;
+    padding: 12px;
+    background-color: #73AD21;
+    margin-bottom: 14px;
+    text-align: center;
+    color: white;
+}
+
 .main-form-section {
     margin: auto;
-    width: 80%;
+    width: 800px;
     border: 2px solid #73AD21;
     padding: 10px;
 }
 
 .row {
-    display: block;
-    background-color: lawngreen;
-    padding: 20px 5px;
+    display: table;
+}
+
+.col {
+    float: left;
+    width: 150px;
+    padding: 10px;
+    height: 60px;
+}
+
+.col2 {
+    float: left;
+    width: 150px;
+    padding: 5px;
+    height: 30px;
 }
 
 .col3 {
-    
+    float: left;
+    width: 200px;
+    padding: 10px;
+    height: 60px;
 }
 
-.col6 {
-    
+.col-error {
+    float: left;
+    width: 300px;
+    padding: 15px;
+    height: 40px;
+    color: white;
+    background: red;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
-.col12 {
-    
+.after-box {
+    clear: both;
+}
+
+.results-section {
+    height: 500px;
 }
 
 .php-section {
-    width: 30%;
-    height: 100px;
-    border: 2px solid lightblue;
+    width: 376px;
+    height: 400px;
+    border: 2px solid #73AD21;
     padding: 10px;
     float: left;
 }
 
 .javascript-section {
-    width: 60%;
-    height: 200px;
-    border: 2px solid lightblue;
+    width: 366px;
+    height: 400px;
+    border: 2px solid #73AD21;
     padding: 10px;
     margin-left: 10px;
     float: left;
 }
 
-.results-section {
-    height: 300px;
+
+span {
+    color: red;
+}
+
+.subheader0 {
+    padding: 6px 0px 8px 0px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.subheader {
+    padding: 12px 0px 2px 0px;
+}
+
+.important {
+    border: 2px solid #73AD21;
+    color: red;
+    padding: 5px;
+}
+
+.important2 {
+    float: right;
+    padding: 8px 0px 0px 0px;
+    color: red;
+}
+
+.btn {
+    background: #73AD21;
+    padding: 6px 14px;
+    color: white;
+    border-radius: 8px;
+    
+}
+
+.gap {
+    padding: 6px 0px;
 }

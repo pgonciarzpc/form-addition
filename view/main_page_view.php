@@ -2,29 +2,66 @@
     <div class="main-form-section">
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
             <div class="row">
-                <div class="col3">
-                    <label>Piersza liczba <span>*</span></label>
+                <div class="col">
+                    <label>Pierwsza liczba <span>*</span></label>
                 </div>
-                <div class="col6">
-                    <input type="number" name="firstValue" min="<?php echo $minValue; ?>" max="<?php echo $maxValue; ?>" 
-                           value="0.00" required step="0.01">
+                <div class="col">
+                    <input type="number" 
+                           id="firstValue"
+                           name="firstValue" 
+                           min="<?php echo $minValue; ?>" 
+                           max="<?php echo $maxValue; ?>" 
+                           value="<?php echo $firstValue; ?>" 
+                           required 
+                           step="0.01">
+                </div>
+                <div class="important2">
+                    <?php
+                        if (!empty($firstValueText)) {
+                            echo $firstValueText;
+                        }
+                    ?>
                 </div>
             </div>
-
+            <div class="after-box"></div>
             <div class="row">
-                <div class="col3">
+                <div class="col">
                     <label>Druga liczba <span>*</span></label>
                 </div>
-                <div class="col6">
-                    <input type="number" name="secondValue" min="<?php echo $minValue; ?>" max="<?php echo $maxValue; ?>" 
-                           value="0.00"  required step="0.01">
+                <div class="col">
+                    <input type="number" 
+                           id="secondValue" 
+                           name="secondValue" 
+                           min="<?php echo $minValue; ?>" 
+                           max="<?php echo $maxValue; ?>" 
+                           value="<?php echo $secondValue; ?>" 
+                           required 
+                           step="0.01">
+                </div>
+                <div class="important2">
+                    <?php
+                        if (!empty($secondValueText)) {
+                            echo $secondValueText;
+                        }
+                    ?>
                 </div>
             </div>
-
+            
+            <div class="after-box"></div>
+            
             <div class="row">
-                <div class="col12">
-                    <button type="submit">Dodaj (w PHP)</button>
+                <div class="col2">
+                    <button type="submit" class="btn">Dodaj (w PHP)</button>
                 </div>
+                <?php 
+                    if (null !== $finalResultPLN) {
+                ?>
+                    <div class="col2">
+                        <button type="button" class="btn" id="addValues">Dodaj (w JavaScript)</button>
+                    </div>
+                <?php
+                    }
+                ?>
             </div>
 
         </form>
@@ -34,37 +71,4 @@
 
 <?php include 'layout.php'; ?>
 
-<?php 
-    if (!is_null($finalResultPLN)) {
-?>
-<br>
-    <div class="main-form-section">
-        <div class="results-section">
-            <div class="php-section">
-                <div class="col-3">
-                    <?php
-                        echo $firstValue;
-                    ?>
-                </div>
-                <div class="col-3">
-                    <?php
-                        echo $secondValue;
-                    ?>
-                </div>
-                <?php
-                    echo $finalResultPLN;
-                ?>
-            </div>
-            
-            <div class="javascript-section">
-                <?php
-                    echo $firstValueReal;
-                ?>
-            </div>
-        </div>
-
-    </div>
-
-<?php 
-    }
-?>
+<?php include 'results.php'; ?>
