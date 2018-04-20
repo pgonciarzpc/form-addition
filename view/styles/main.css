@@ -1,0 +1,49 @@
+/* 
+    Author     : Paweł Gonciarz
+*/
+
+.main-form-section {
+    margin: auto;
+    width: 80%;
+    border: 2px solid #73AD21;
+    padding: 10px;
+}
+
+.row {
+    display: block;
+    background-color: lawngreen;
+    padding: 20px 5px;
+}
+
+.col3 {
+    
+}
+
+.col6 {
+    
+}
+
+.col12 {
+    
+}
+
+.php-section {
+    width: 30%;
+    height: 100px;
+    border: 2px solid lightblue;
+    padding: 10px;
+    float: left;
+}
+
+.javascript-section {
+    width: 60%;
+    height: 200px;
+    border: 2px solid lightblue;
+    padding: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+.results-section {
+    height: 300px;
+}
